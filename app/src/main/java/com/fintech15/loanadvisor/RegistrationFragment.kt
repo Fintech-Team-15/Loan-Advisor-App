@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import com.fintech15.loanadvisor.databinding.FragmentRegistrationBinding
 
 /**
@@ -19,6 +20,12 @@ class RegistrationFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         binding = FragmentRegistrationBinding.inflate(inflater, container, false)
+
+        binding.login.setOnClickListener {
+            val action = RegistrationFragmentDirections.actionRegistrationFragmentToLoginFragment()
+            view?.findNavController()?.navigate(action)
+        }
+
         return binding.root
     }
 }
