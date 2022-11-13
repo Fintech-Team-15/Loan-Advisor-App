@@ -33,23 +33,29 @@ android {
 
 dependencies {
 
-    def core_ktx = "1.9.0"
-    def app_compat = "1.5.1"
-    def material = "1.7.0"
-    def constraint_layout = "2.1.4"
-    def test_impl_junit = "4.13.2"
-    def android_test_impl_junit = "1.1.4"
-    def android_test_impl_espresso = "3.5.0"
+    def core_ktx_version = "1.9.0"
+    def app_compat_version = "1.5.1"
+    def material_version = "1.7.0"
+    def constraint_layout_version = "2.1.4"
+    def test_impl_junit_version = "4.13.2"
+    def android_test_impl_junit_version = "1.1.4"
+    def android_test_impl_espresso_version = "3.5.0"
+    def nav_version = "2.5.3"
 
-    implementation "androidx.core:core-ktx:$core_ktx"
-    implementation "androidx.appcompat:appcompat:$app_compat"
-    implementation "com.google.android.material:material:$material"
-    implementation "androidx.constraintlayout:constraintlayout:$constraint_layout"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
+
+    implementation "androidx.core:core-ktx:$core_ktx_version"
+    implementation "androidx.appcompat:appcompat:$app_compat_version"
+    implementation "com.google.android.material:material:$material_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
 
     // Unit Testing
-    testImplementation "junit:junit:$test_impl_junit"
+    testImplementation "junit:junit:$test_impl_junit_version"
 
     // Instrumentation Testing
-    androidTestImplementation "androidx.test.ext:junit:$android_test_impl_junit"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$android_test_impl_espresso"
+    androidTestImplementation "androidx.test.ext:junit:$android_test_impl_junit_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$android_test_impl_espresso_version"
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
 }
