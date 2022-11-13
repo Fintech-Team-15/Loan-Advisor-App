@@ -3,4 +3,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello Login Screen</string>
     <string name="green_top_bar">Green Top Bar</string>
+    <string name="login_email">Enter your email</string>
+    <string name="login_password">Enter your password</string>
+    <string name="login_description_text">Welcome! Enter your credentials to login</string>
+    <string name="login_button">Login</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="register">Register</string>
 </resources>
