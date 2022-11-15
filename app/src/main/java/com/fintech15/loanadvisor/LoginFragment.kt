@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.fintech15.loanadvisor.databinding.FragmentLoginBinding
+import com.fintech15.loanadvisor.utils.PASSWORD_LENGTH
 import com.google.android.material.textfield.TextInputEditText
 
 /**
@@ -52,7 +53,7 @@ class LoginFragment : Fragment() {
             passwordTextInput.error = "Password cannot be empty"
         }
 
-        if (password.length < 6) {
+        if (password.length < PASSWORD_LENGTH) {
             passwordTextInput.error = "Password should be greater than 6 characters"
         }
 

@@ -31,7 +31,6 @@
                 android:textSize="34sp" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/registration_email_text_input"
                 style="?attr/textInputOutlinedStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -39,6 +38,7 @@
                 android:paddingTop="28dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registration_email_text_input"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
