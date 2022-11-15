@@ -1,7 +1,7 @@
 package com.fintech15.loanadvisor
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.fintech15.loanadvisor.databinding.ActivityMainBinding
