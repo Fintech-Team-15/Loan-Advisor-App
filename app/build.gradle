@@ -37,7 +37,6 @@ android {
 }
 
 
-
 dependencies {
 
     def core_ktx_version = "1.9.0"

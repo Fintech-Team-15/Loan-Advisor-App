@@ -49,6 +49,7 @@
                 android:textColor="#757575" />
 
             <Button
+                style="@style/Widget.Material3.Button.IconButton.Filled"
                 android:id="@+id/login_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -77,5 +78,7 @@
                     android:text="@string/register" />
             </LinearLayout>
         </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </FrameLayout>
