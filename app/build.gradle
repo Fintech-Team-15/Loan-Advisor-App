@@ -48,8 +48,7 @@ dependencies {
     def android_test_impl_junit_version = "1.1.4"
     def android_test_impl_espresso_version = "3.5.0"
     def nav_version = "2.5.3"
-    def androidX_test_runner_version = "1.5.1"
-    def androidX_test_core_version = "1.5.0"
+    def splashscreen_version = "1.0.0"
 
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
@@ -59,14 +58,13 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$app_compat_version"
     implementation "com.google.android.material:material:$material_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
+    implementation "androidx.core:core-splashscreen:$splashscreen_version"
 
     // Unit Testing
     testImplementation "junit:junit:$test_impl_junit_version"
 
     // Instrumentation Testing
-    androidTestImplementation "androidx.test:core-ktx:$androidX_test_core_version"
-    androidTestImplementation "androidx.test:runner:$androidX_test_runner_version"
+    androidTestImplementation "androidx.test.ext:junit:$android_test_impl_junit_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$android_test_impl_espresso_version"
-    androidTestImplementation "androidx.test.ext:junit-ktx:$android_test_impl_junit_version"
     androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
 }
