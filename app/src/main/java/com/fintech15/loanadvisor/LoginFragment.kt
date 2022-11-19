@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.fintech15.loanadvisor.databinding.FragmentLoginBinding
 import com.fintech15.loanadvisor.utils.Validator
+import com.fintech15.loanadvisor.utils.validateEmail
+import com.fintech15.loanadvisor.utils.validatePassword
 import com.google.android.material.textfield.TextInputLayout
 
 /**
@@ -30,8 +32,8 @@ class LoginFragment : Fragment() {
         passwordTextInput = binding.loginPasswordTextInput
 
         binding.loginButton.setOnClickListener {
-            validateEmail()
-            validatePassword()
+            validateEmail(emailTextInput)
+            validatePassword(passwordTextInput)
         }
 
         binding.forgotPassword.setOnClickListener {
@@ -44,25 +46,5 @@ class LoginFragment : Fragment() {
         }
 
         return binding.root
-    }
-
-    private fun validatePassword() {
-        val password = passwordTextInput.editText?.text.toString()
-
-        if (Validator.isEmptyString(password)) passwordTextInput.error =
-            "Password cannot be empty" else passwordTextInput.error = ""
-
-        if (!Validator.isValidPassword(password)) passwordTextInput.error =
-            "Password should be greater than 6 characters" else passwordTextInput.error = ""
-    }
-
-    private fun validateEmail() {
-        val email = emailTextInput.editText?.text.toString()
-
-        if (Validator.isEmptyString(email)) emailTextInput.error =
-            "Email cannot be empty" else emailTextInput.error = ""
-
-        if (!Validator.isEmailAddress(email)) emailTextInput.error =
-            "Please enter a valid email address" else emailTextInput.error = ""
     }
 }

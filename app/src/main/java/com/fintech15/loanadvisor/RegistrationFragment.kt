@@ -1,17 +1,15 @@
 package com.fintech15.loanadvisor
 
 import android.os.Bundle
-import android.util.Log
-import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.fintech15.loanadvisor.databinding.FragmentRegistrationBinding
-import com.fintech15.loanadvisor.utils.PASSWORD_LENGTH
 import com.fintech15.loanadvisor.utils.Validator
-import com.google.android.material.textfield.TextInputEditText
+import com.fintech15.loanadvisor.utils.validateEmail
+import com.fintech15.loanadvisor.utils.validatePassword
 import com.google.android.material.textfield.TextInputLayout
 
 /**
@@ -25,8 +23,7 @@ class RegistrationFragment : Fragment() {
 
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
         binding = FragmentRegistrationBinding.inflate(inflater, container, false)
@@ -36,8 +33,8 @@ class RegistrationFragment : Fragment() {
         confirmPasswordTextInput = binding.registrationConfirmPasswordTextInput
 
         binding.registrationButton.setOnClickListener {
-            validateEmail()
-            validatePassword()
+            validateEmail(emailTextInput)
+            validatePassword(passwordTextInput)
             validateConfirmPassword()
         }
 
@@ -49,19 +46,6 @@ class RegistrationFragment : Fragment() {
         return binding.root
     }
 
-
-
-
-    private fun validatePassword() {
-        val password = passwordTextInput.editText?.text.toString()
-
-        if (Validator.isEmptyString(password)) passwordTextInput.error =
-            "Password cannot be empty" else passwordTextInput.error = ""
-
-        if (!Validator.isValidPassword(password)) passwordTextInput.error =
-            "Password should be greater than 6 characters" else passwordTextInput.error = ""
-    }
-
     private fun validateConfirmPassword() {
         val password = confirmPasswordTextInput.editText?.text.toString()
 
@@ -70,20 +54,10 @@ class RegistrationFragment : Fragment() {
 
         if (!Validator.isValidPassword(password)) confirmPasswordTextInput.error =
             "Password should be greater than 6 characters" else confirmPasswordTextInput.error = ""
+        val comparePasswordFields =
+            !Validator.isEmptyString(password) && password != passwordTextInput.editText?.text.toString()
+        if (!comparePasswordFields) confirmPasswordTextInput.error =
+            "Confirm password should match Password" else confirmPasswordTextInput.error = ""
 
-        if (password != passwordTextInput.editText?.text.toString()) {
-            confirmPasswordTextInput.error = "Confirm password should match Password"
-        }
     }
-
-    private fun validateEmail() {
-        val email = emailTextInput.editText?.text.toString()
-
-        if (Validator.isEmptyString(email)) emailTextInput.error =
-            "Email cannot be empty" else emailTextInput.error = ""
-
-        if (!Validator.isEmailAddress(email)) emailTextInput.error =
-            "Please enter a valid email address" else emailTextInput.error = ""
-    }
-
 }
