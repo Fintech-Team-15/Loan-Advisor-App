@@ -31,38 +31,13 @@
                 android:text="@string/login_description_text"
                 android:textSize="34sp" />
 
-            <com.google.android.material.textfield.TextInputLayout
+            <include
                 android:id="@+id/login_email_text_input"
-                style="?attr/textInputOutlinedStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/login_email"
-                android:paddingTop="28dp">
+                layout="@layout/email_text_input" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/login_email_editText_input"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
-                    android:textColorHint="#616161" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
+            <include
                 android:id="@+id/login_password_text_input"
-                style="?attr/textInputOutlinedStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/login_password"
-                android:paddingTop="28dp"
-                app:endIconMode="password_toggle">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/login_password_editText_input"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:textColorHint="#616161" />
-            </com.google.android.material.textfield.TextInputLayout>
+                layout="@layout/password_text_input" />
 
             <TextView
                 android:id="@+id/forgot_password"

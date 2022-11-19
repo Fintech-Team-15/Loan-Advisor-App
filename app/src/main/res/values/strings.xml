@@ -15,4 +15,6 @@
     <string name="already_have_an_account">Already have an account?</string>
     <string name="register_button">Register</string>
     <string name="confirm_your_password">Confirm your password</string>
+    <string name="registration_register_button">Register</string>
+    <string name="login_login_button">Login</string>
 </resources>

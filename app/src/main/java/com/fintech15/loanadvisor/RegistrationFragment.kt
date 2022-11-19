@@ -28,9 +28,9 @@ class RegistrationFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentRegistrationBinding.inflate(inflater, container, false)
 
-        emailTextInput = binding.registrationEmailTextInput
-        passwordTextInput = binding.registrationPasswordTextInput
-        confirmPasswordTextInput = binding.registrationConfirmPasswordTextInput
+        emailTextInput = binding.registrationEmailTextInput.root
+        passwordTextInput = binding.registrationPasswordTextInput.root
+        confirmPasswordTextInput = binding.registrationConfirmPasswordTextInput.root
 
         binding.registrationButton.setOnClickListener {
             validateEmail(emailTextInput)

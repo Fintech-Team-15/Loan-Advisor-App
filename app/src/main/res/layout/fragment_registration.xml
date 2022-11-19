@@ -30,56 +30,20 @@
                 android:text="@string/registration_description"
                 android:textSize="34sp" />
 
-            <com.google.android.material.textfield.TextInputLayout
+            <include
                 android:id="@+id/registration_email_text_input"
-                style="?attr/textInputOutlinedStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/login_email"
-                android:paddingTop="28dp">
+                layout="@layout/email_text_input"
+                />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/registration_email_editText_input"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
-                    android:textColorHint="#616161" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
+            <include
                 android:id="@+id/registration_password_text_input"
-                style="?attr/textInputOutlinedStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/login_password"
-                android:paddingTop="28dp"
-                app:endIconMode="password_toggle">
+                layout="@layout/password_text_input"
+                />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/registration_password_editText_input"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:textColorHint="#616161" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
+            <include
                 android:id="@+id/registration_confirm_password_text_input"
-                style="?attr/textInputOutlinedStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/confirm_your_password"
-                android:paddingTop="28dp"
-                android:paddingBottom="28dp"
-                app:endIconMode="password_toggle">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/registration_confirm_password_editText_input"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:textColorHint="#616161" />
-            </com.google.android.material.textfield.TextInputLayout>
+                layout="@layout/password_text_input"
+                />
 
             <Button
                 android:id="@+id/registration_button"

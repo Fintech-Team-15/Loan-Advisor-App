@@ -3,7 +3,7 @@ package com.fintech15.loanadvisor.utils
 import java.util.regex.Pattern
 
 object Validator {
-    private val PASSWORD_LENGTH = 6
+    private const val PASSWORD_LENGTH = 6
     private val EMAIL_ADDRESS_PATTERN = Pattern.compile(
         "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
                 "\\@" +

@@ -26,8 +26,8 @@ class LoginFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentLoginBinding.inflate(inflater, container, false)
 
-        emailTextInput = binding.loginEmailTextInput
-        passwordTextInput = binding.loginPasswordTextInput
+        emailTextInput = binding.loginEmailTextInput.root
+        passwordTextInput = binding.loginPasswordTextInput.root
 
         binding.loginButton.setOnClickListener {
             validateEmail(emailTextInput)
