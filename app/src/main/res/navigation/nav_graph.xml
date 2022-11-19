@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_login_fragment_to_registration_fragment"
             app:destination="@id/registration_fragment" />
+        <action
+            android:id="@+id/action_login_fragment_to_home_fragment"
+            app:destination="@id/home_fragment" />
     </fragment>
     <fragment
         android:id="@+id/registration_fragment"
@@ -23,4 +26,18 @@
             android:id="@+id/action_registration_fragment_to_login_fragment"
             app:destination="@id/login_fragment" />
     </fragment>
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.fintech15.loanadvisor.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_loanCalculatorFragment"
+            app:destination="@id/loan_calculator_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loan_calculator_fragment"
+        android:name="com.fintech15.loanadvisor.LoanCalculatorFragment"
+        android:label="fragment_loan_calculator"
+        tools:layout="@layout/fragment_loan_calculator" />
 </navigation>
