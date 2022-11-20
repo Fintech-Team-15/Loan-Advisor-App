@@ -32,6 +32,10 @@ class LoginFragment : Fragment() {
         binding.loginButton.setOnClickListener {
             validateEmail(emailTextInput)
             validatePassword(passwordTextInput)
+            if (emailTextInput.error?.isEmpty()!! && passwordTextInput.error?.isEmpty()!!) {
+                val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
+                view?.findNavController()?.navigate(action)
+            }
         }
 
         binding.forgotPassword.setOnClickListener {

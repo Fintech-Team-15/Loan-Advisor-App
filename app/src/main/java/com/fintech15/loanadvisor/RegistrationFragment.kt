@@ -56,7 +56,7 @@ class RegistrationFragment : Fragment() {
             "Password should be greater than 6 characters" else confirmPasswordTextInput.error = ""
         val comparePasswordFields =
             !Validator.isEmptyString(password) && password != passwordTextInput.editText?.text.toString()
-        if (!comparePasswordFields) confirmPasswordTextInput.error =
+        if (comparePasswordFields) confirmPasswordTextInput.error =
             "Confirm password should match Password" else confirmPasswordTextInput.error = ""
 
     }

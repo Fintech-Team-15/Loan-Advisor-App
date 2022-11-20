@@ -49,8 +49,8 @@
                 android:textColor="#757575" />
 
             <Button
-                style="@style/Widget.Material3.Button.IconButton.Filled"
                 android:id="@+id/login_button"
+                style="@style/ThemeOverlay.Material3.Button.IconButton.Filled"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:height="64dp"

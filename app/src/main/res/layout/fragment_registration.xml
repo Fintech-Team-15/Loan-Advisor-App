@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".RegistrationFragment">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -31,22 +32,19 @@
 
             <include
                 android:id="@+id/registration_email_text_input"
-                layout="@layout/email_text_input"
-                />
+                layout="@layout/email_text_input" />
 
             <include
                 android:id="@+id/registration_password_text_input"
-                layout="@layout/password_text_input"
-                />
+                layout="@layout/password_text_input" />
 
             <include
                 android:id="@+id/registration_confirm_password_text_input"
-                layout="@layout/password_text_input"
-                />
+                layout="@layout/password_text_input" />
 
             <Button
-                style="@style/Widget.Material3.Button.IconButton.Filled"
                 android:id="@+id/registration_button"
+                style="@style/ThemeOverlay.Material3.Button.IconButton.Filled"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:height="64dp"
