@@ -28,7 +28,7 @@ class LoginScreenTest {
     @Test
     fun testEmailInput() {
         val emailTextInput =
-            onView(withId(R.id.login_email_editText_input)).check(matches(isFocusable()))
+            onView(withId(R.id.login_email_text_input)).check(matches(isDisplayed()))
         emailTextInput.perform(typeText("kitso@gmail.com"))
             .check(matches(withText("kitso@gmail.com")))
     }
@@ -36,7 +36,7 @@ class LoginScreenTest {
     @Test
     fun testPasswordInput() {
         val passwordTextInput =
-            onView(withId(R.id.login_password_editText_input)).check(matches(isFocusable()))
+            onView(withId(R.id.login_password_text_input)).check(matches(isDisplayed()))
                 .perform(
                     click()
                 )
@@ -47,11 +47,11 @@ class LoginScreenTest {
     @Test
     fun testInvalidInput() {
         val emailTextInput =
-            onView(withId(R.id.login_email_editText_input)).perform(click())
+            onView(withId(R.id.login_email_text_input)).perform(click())
         emailTextInput.perform(typeText("kitso"))
             .check(matches(withText("kitso")))
         val passwordTextInput =
-            onView(withId(R.id.login_password_editText_input)).perform(
+            onView(withId(R.id.login_password_text_input)).perform(
                 click()
             )
         passwordTextInput.perform(typeText("1234"))
