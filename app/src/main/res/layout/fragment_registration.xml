@@ -23,7 +23,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/registration_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -45,10 +45,11 @@
                 layout="@layout/password_text_input"
                 />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/registration_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:height="64dp"
                 android:text="@string/register_button" />
 
@@ -59,14 +60,15 @@
                 android:orientation="horizontal"
                 android:paddingTop="8dp">
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/login_prompt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/already_have_an_account" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/login"
+                    android:textColor="?attr/colorPrimary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingStart="4dp"
