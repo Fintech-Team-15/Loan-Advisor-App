@@ -13,18 +13,20 @@
         <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
-        <!-- Set the splash screen background, animated icon, and animation duration. -->
-        <item name="windowSplashScreenBackground">@color/white</item>
 
-        <!-- Use windowSplashScreenAnimatedIcon to add either a drawable or an
-             animated drawable. One of these is required. -->
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_screen_icon</item>
-        <!-- Required for animated icons -->
-        <item name="windowSplashScreenAnimationDuration">3000</item>
+<!--    <style name="Theme.App.Starting" parent="Theme.SplashScreen">-->
+<!--        &lt;!&ndash; Set the splash screen background, animated icon, and animation duration. &ndash;&gt;-->
+<!--        <item name="windowSplashScreenBackground">@color/white</item>-->
 
-        <!-- Set the theme of the Activity that directly follows your splash screen. -->
-        <!-- Required -->
-        <item name="postSplashScreenTheme">@style/Theme.LoanAdvisor</item>
-    </style>
+<!--        &lt;!&ndash; Use windowSplashScreenAnimatedIcon to add either a drawable or an-->
+<!--             animated drawable. One of these is required. &ndash;&gt;-->
+<!--        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_screen_icon</item>-->
+<!--        &lt;!&ndash; Required for animated icons &ndash;&gt;-->
+<!--        <item name="windowSplashScreenAnimationDuration">3000</item>-->
+
+<!--        &lt;!&ndash; Set the theme of the Activity that directly follows your splash screen. &ndash;&gt;-->
+<!--        &lt;!&ndash; Required &ndash;&gt;-->
+<!--        <item name="postSplashScreenTheme">@style/Theme.LoanAdvisor</item>-->
+<!--    </style>-->
+
 </resources>
