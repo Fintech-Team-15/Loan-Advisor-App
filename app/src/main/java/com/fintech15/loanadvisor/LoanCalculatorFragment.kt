@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.fintech15.loanadvisor.databinding.FragmentLoanCalculatorBinding
 
 
 /**
@@ -13,13 +14,14 @@ import android.view.ViewGroup
  */
 class LoanCalculatorFragment : Fragment() {
 
+    private lateinit var binding: FragmentLoanCalculatorBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_loan_calculator, container, false)
+        binding = FragmentLoanCalculatorBinding.inflate(inflater, container, false)
+        return binding.root
     }
-
-
 }
