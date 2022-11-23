@@ -32,6 +32,7 @@ class LoginFragment : Fragment() {
         binding.loginButton.setOnClickListener {
             validateEmail(emailTextInput)
             validatePassword(passwordTextInput)
+            navigateToHomeScreen()
         }
 
         binding.forgotPassword.setOnClickListener {
@@ -39,10 +40,22 @@ class LoginFragment : Fragment() {
         }
 
         binding.register.setOnClickListener {
-            val action = LoginFragmentDirections.actionLoginFragmentToRegistrationFragment()
-            view?.findNavController()?.navigate(action)
+            navigateToRegistrationScreen()
         }
 
         return binding.root
     }
+
+    private fun navigateToRegistrationScreen() {
+        val action = LoginFragmentDirections.actionLoginFragmentToRegistrationFragment()
+        view?.findNavController()?.navigate(action)
+    }
+
+    private fun navigateToHomeScreen() {
+        if (emailTextInput.error.isNullOrEmpty() && passwordTextInput.error.isNullOrEmpty()) {
+            val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
+            view?.findNavController()?.navigate(action)
+        }
+    }
+
 }

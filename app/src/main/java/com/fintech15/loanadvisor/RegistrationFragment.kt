@@ -36,11 +36,11 @@ class RegistrationFragment : Fragment() {
             validateEmail(emailTextInput)
             validatePassword(passwordTextInput)
             validateConfirmPassword()
+            navigateToLoginScreen()
         }
 
         binding.login.setOnClickListener {
-            val action = RegistrationFragmentDirections.actionRegistrationFragmentToLoginFragment()
-            view?.findNavController()?.navigate(action)
+            navigateToLoginScreen()
         }
 
         return binding.root
@@ -58,6 +58,17 @@ class RegistrationFragment : Fragment() {
             !Validator.isEmptyString(password) && password != passwordTextInput.editText?.text.toString()
         if (!comparePasswordFields) confirmPasswordTextInput.error =
             "Confirm password should match Password" else confirmPasswordTextInput.error = ""
+    }
 
+    private fun navigateToHomeScreen() {
+        if (emailTextInput.error.isNullOrEmpty() && passwordTextInput.error.isNullOrEmpty() && confirmPasswordTextInput.error.isNullOrEmpty()) {
+            val action = RegistrationFragmentDirections.actionRegistrationFragmentToLoginFragment()
+            view?.findNavController()?.navigate(action)
+        }
+    }
+
+    private fun navigateToLoginScreen() {
+        val action = RegistrationFragmentDirections.actionRegistrationFragmentToLoginFragment()
+        view?.findNavController()?.navigate(action)
     }
 }
