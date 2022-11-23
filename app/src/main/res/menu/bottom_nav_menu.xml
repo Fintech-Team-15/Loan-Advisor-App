@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/menu_loan_calculator"
+        android:icon="@drawable/ic_menu_request_quote"
+        android:id="@+id/loan_calculator_fragment"
+        />
+    <item android:title="@string/menu_articles"
+        android:icon="@drawable/ic_menu_article"
+        android:id="@+id/articles_fragment"
+        />
+    <item android:title="@string/menu_compare_loans"
+        android:icon="@drawable/ic_menu_balance"
+        android:id="@+id/compare_loans_fragment"
+        />
+
+</menu>

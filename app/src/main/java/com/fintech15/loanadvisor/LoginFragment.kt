@@ -53,7 +53,7 @@ class LoginFragment : Fragment() {
 
     private fun navigateToHomeScreen() {
         if (emailTextInput.error.isNullOrEmpty() && passwordTextInput.error.isNullOrEmpty()) {
-            val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
+            val action = LoginFragmentDirections.actionLoginFragmentToLoanCalculatorFragment()
             view?.findNavController()?.navigate(action)
         }
     }
