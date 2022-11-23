@@ -23,4 +23,10 @@
     <string name="article_coming_soon_image">article coming soon image</string>
     <string name="coming_soon">Coming soon</string>
     <string name="compare_image_coming_soon_image">Compare image coming soon image</string>
+    <string name="calculator_get_advice">Get Advice</string>
+    <string name="calculator_loan_interest">Loan Interest</string>
+    <string name="calculator_loan_amount">Loan Amount</string>
+    <string name="calculator_loan_term">Loan Term</string>
+    <string name="calculator_salary">Your Monthly Income</string>
+    <string name="advice_coming_soon_image">Advice coming soon image</string>
 </resources>

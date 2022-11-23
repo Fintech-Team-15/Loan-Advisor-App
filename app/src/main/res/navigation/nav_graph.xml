@@ -30,7 +30,11 @@
         android:id="@+id/loan_calculator_fragment"
         android:name="com.fintech15.loanadvisor.LoanCalculatorFragment"
         android:label="fragment_loan_calculator"
-        tools:layout="@layout/fragment_loan_calculator" />
+        tools:layout="@layout/fragment_loan_calculator" >
+        <action
+            android:id="@+id/action_loan_calculator_fragment_to_advice_fragment"
+            app:destination="@id/advice_fragment" />
+    </fragment>
     <fragment
         android:id="@+id/articles_fragment"
         android:name="com.fintech15.loanadvisor.ArticlesFragment"
@@ -41,4 +45,9 @@
         android:name="com.fintech15.loanadvisor.CompareLoansFragment"
         android:label="fragment_compare_loans"
         tools:layout="@layout/fragment_compare_loans" />
+    <fragment
+        android:id="@+id/advice_fragment"
+        android:name="com.fintech15.loanadvisor.AdviceFragment"
+        android:label="fragment_advice"
+        tools:layout="@layout/fragment_advice" />
 </navigation>
