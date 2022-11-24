@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_email">Kwala imeile</string>
+    <string name="login_password">Kwala khunololamoraba wa gago</string>
+    <string name="forgot_password">O lebetse khunololamoraba wa gago?</string>
+    <string name="already_have_an_account">A o setse o na le akhaonto?</string>
+    <string name="don_t_have_an_account">Ga o na akhaonto?</string>
+    <string name="register">Ikwadise</string>
+    <string name="registration_description">Dumela, ikwadise go dirisa tswelela pele</string>
+    <string name="confirm_your_password">Rurifatsa khunololamoraba wa gago</string>
+    <string name="registration_register_button">Ikwadise</string>
+    <string name="register_button">Ikwadise</string>
+    <string name="login_description_text">Kwala boitshupi jwa gago go tsena</string>
+    <string name="login_button">Tsena</string>
+    <string name="login">Tsena</string>
+    <string name="login_login_button">Tsena</string>
+    <string name="menu_loan_calculator">Sebaledi sa kadimo ya madi</string>
+    <string name="menu_articles">Dipego</string>
+    <string name="menu_compare_loans">Bapisisa dikadimo tsa madi</string>
+    <string name="calculator_get_advice">Tsaya kgakololo</string>
+    <string name="calculator_salary">Tuelo ya kgwedi</string>
+    <string name="calculator_loan_amount">Madi a kadimo</string>
+    <string name="calculator_loan_term">Lebaka la kadimo</string>
+    <string name="article_coming_soon_image">setshwantsho sa dipego</string>
+    <string name="compare_image_coming_soon_image">setshwantsho sa dipapisiso</string>
+    <string name="coming_soon">Go etla, re se felele pelo</string>
+    <string name="advice_coming_soon_image">setshwantsho sa dikgakololo</string>
+    <string name="hello_blank_fragment">Go etla, re se felele pelo</string>
+    <string name="calculator_loan_interest">Dituelo tsa kadimo ya madi</string>
+</resources>
