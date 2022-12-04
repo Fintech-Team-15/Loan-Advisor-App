@@ -13,14 +13,15 @@ import com.fintech15.loanadvisor.databinding.FragmentCompareLoansBinding
  * create an instance of this fragment.
  */
 class CompareLoansFragment : Fragment() {
-    private lateinit var binding: FragmentCompareLoansBinding
+    private var _binding: FragmentCompareLoansBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        binding = FragmentCompareLoansBinding.inflate(inflater, container, false)
+        _binding = FragmentCompareLoansBinding.inflate(inflater, container, false)
         return binding.root
     }
 }

@@ -1,9 +1,8 @@
 package com.fintech15.loanadvisor
 
 import com.fintech15.loanadvisor.utils.Validator
-import org.junit.Test
-
 import org.junit.Assert.*
+import org.junit.Test
 
 
 class ValidatorUnitTest {

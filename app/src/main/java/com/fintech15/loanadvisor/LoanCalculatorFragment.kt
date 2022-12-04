@@ -15,19 +15,24 @@ import com.fintech15.loanadvisor.databinding.FragmentLoanCalculatorBinding
  */
 class LoanCalculatorFragment : Fragment() {
 
-    private lateinit var binding: FragmentLoanCalculatorBinding
+    private var _binding: FragmentLoanCalculatorBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        binding = FragmentLoanCalculatorBinding.inflate(inflater, container, false)
+        _binding = FragmentLoanCalculatorBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         binding.getAdviceButton.setOnClickListener {
             val action =
                 LoanCalculatorFragmentDirections.actionLoanCalculatorFragmentToAdviceFragment()
-            view?.findNavController()?.navigate(action)
+            view.findNavController().navigate(action)
         }
-        return binding.root
     }
 }

@@ -13,14 +13,15 @@ import com.fintech15.loanadvisor.databinding.FragmentArticlesBinding
  * create an instance of this fragment.
  */
 class ArticlesFragment : Fragment() {
-    private lateinit var binding: FragmentArticlesBinding
+    private var _binding: FragmentArticlesBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        binding = FragmentArticlesBinding.inflate(inflater, container, false)
+        _binding = FragmentArticlesBinding.inflate(inflater, container, false)
         return binding.root
     }
 }

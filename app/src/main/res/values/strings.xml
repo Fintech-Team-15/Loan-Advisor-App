@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name" translatable="false">Loan Advisor</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Coming soon</string>
     <string name="green_top_bar" translatable="false">Green Top Bar</string>
     <string name="login_email">Enter your email</string>

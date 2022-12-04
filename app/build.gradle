@@ -49,6 +49,7 @@ dependencies {
     def android_test_impl_junit_version = "1.1.4"
     def android_test_impl_espresso_version = "3.5.0"
     def nav_version = "2.5.3"
+    def coroutines_version = "1.6.4"
     def splashscreen_version = "1.0.0"
     def firebase_version = "31.1.0"
 
@@ -69,6 +70,7 @@ dependencies {
 
     // Unit Testing
     testImplementation "junit:junit:$test_impl_junit_version"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
 
     // Instrumentation Testing
     androidTestImplementation "androidx.test.ext:junit:$android_test_impl_junit_version"

@@ -38,12 +38,12 @@
     <fragment
         android:id="@+id/articles_fragment"
         android:name="com.fintech15.loanadvisor.ArticlesFragment"
-        android:label="Articles"
+        android:label="@string/menu_articles"
         tools:layout="@layout/fragment_articles" />
     <fragment
         android:id="@+id/compare_loans_fragment"
         android:name="com.fintech15.loanadvisor.CompareLoansFragment"
-        android:label="Compare Loans"
+        android:label="@string/menu_compare_loans"
         tools:layout="@layout/fragment_compare_loans" />
     <fragment
         android:id="@+id/advice_fragment"

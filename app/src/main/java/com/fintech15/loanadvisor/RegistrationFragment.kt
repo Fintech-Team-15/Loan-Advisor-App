@@ -16,7 +16,8 @@ import com.google.android.material.textfield.TextInputLayout
  * A simple [Fragment] subclass.
  */
 class RegistrationFragment : Fragment() {
-    private lateinit var binding: FragmentRegistrationBinding
+    private var _binding: FragmentRegistrationBinding? = null
+    private val binding get() = _binding!!
     private lateinit var emailTextInput: TextInputLayout
     private lateinit var passwordTextInput: TextInputLayout
     private lateinit var confirmPasswordTextInput: TextInputLayout
@@ -26,12 +27,17 @@ class RegistrationFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        binding = FragmentRegistrationBinding.inflate(inflater, container, false)
+        _binding = FragmentRegistrationBinding.inflate(inflater, container, false)
 
         emailTextInput = binding.registrationEmailTextInput.root
         passwordTextInput = binding.registrationPasswordTextInput.root
         confirmPasswordTextInput = binding.registrationConfirmPasswordTextInput.root
 
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         binding.registrationButton.setOnClickListener {
             validateEmail(emailTextInput)
             validatePassword(passwordTextInput)
@@ -42,8 +48,6 @@ class RegistrationFragment : Fragment() {
         binding.login.setOnClickListener {
             navigateToLoginScreen()
         }
-
-        return binding.root
     }
 
     private fun validateConfirmPassword() {
