@@ -1,4 +1,4 @@
-package com.fintech15.loanadvisor
+package com.fintech15.loanadvisor.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

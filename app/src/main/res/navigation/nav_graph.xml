@@ -3,11 +3,11 @@
              xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loan_calculator_fragment">
+    app:startDestination="@id/login_fragment">
 
     <fragment
         android:id="@+id/login_fragment"
-        android:name="com.fintech15.loanadvisor.LoginFragment"
+        android:name="com.fintech15.loanadvisor.ui.auth.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/registration_fragment"
-        android:name="com.fintech15.loanadvisor.RegistrationFragment"
+        android:name="com.fintech15.loanadvisor.ui.auth.RegistrationFragment"
         android:label="Registration"
         tools:layout="@layout/fragment_registration" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/loan_calculator_fragment"
-        android:name="com.fintech15.loanadvisor.LoanCalculatorFragment"
+        android:name="com.fintech15.loanadvisor.ui.LoanCalculatorFragment"
         android:label="Loan Calculator"
         tools:layout="@layout/fragment_loan_calculator" >
         <action
@@ -37,17 +37,17 @@
     </fragment>
     <fragment
         android:id="@+id/articles_fragment"
-        android:name="com.fintech15.loanadvisor.ArticlesFragment"
+        android:name="com.fintech15.loanadvisor.ui.ArticlesFragment"
         android:label="@string/menu_articles"
         tools:layout="@layout/fragment_articles" />
     <fragment
         android:id="@+id/compare_loans_fragment"
-        android:name="com.fintech15.loanadvisor.CompareLoansFragment"
+        android:name="com.fintech15.loanadvisor.ui.CompareLoansFragment"
         android:label="@string/menu_compare_loans"
         tools:layout="@layout/fragment_compare_loans" />
     <fragment
         android:id="@+id/advice_fragment"
-        android:name="com.fintech15.loanadvisor.AdviceFragment"
+        android:name="com.fintech15.loanadvisor.ui.AdviceFragment"
         android:label="Loan Calculator - Advice"
         tools:layout="@layout/fragment_advice" />
 </navigation>

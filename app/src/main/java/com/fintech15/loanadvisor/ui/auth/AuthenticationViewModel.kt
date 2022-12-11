@@ -50,10 +50,10 @@ class AuthenticationViewModel(private val authenticationRepository: Authenticati
             it.copy(isLoading = true)
         }
         viewModelScope.launch {
-            authenticationRepository.loginWithEmailAndPassword(email, password).let { result ->
+            authenticationRepository.registerWithEmailAndPassword(email, password).let { result ->
                 if (result is Result.Success) {
                     _uiState.update {
-                        it.copy(isLoading = false, isLoggedIn = false)
+                        it.copy(isLoading = false, isLoggedIn = true)
                     }
                 } else if (result is Result.Error) {
                     _uiState.update {

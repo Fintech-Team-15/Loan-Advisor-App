@@ -28,4 +28,6 @@
     <string name="calculator_loan_term">Loan Term</string>
     <string name="calculator_salary">Your Monthly Income</string>
     <string name="advice_coming_soon_image">advice coming soon image</string>
+    <string name="login_checking_credentials">Checking log in credential...</string>
+    <string name="registration_registering_user_text">Registering user...</string>
 </resources>
